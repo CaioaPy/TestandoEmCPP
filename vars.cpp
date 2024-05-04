@@ -21,6 +21,7 @@ int main(){
     aw = 2215.23f;
     bool woo;
     woo = true;
+    char ww = 'w';
 
     cout << h << endl;
     cout << typeid(h).name() << endl;
@@ -30,4 +31,7 @@ int main(){
 
     cout << woo << endl;
     cout << typeid(woo).name() << endl;
+
+    cout << (ww) << endl;
+    cout << typeid(ww).name() << endl;
 }
