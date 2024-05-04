@@ -17,8 +17,10 @@ int main(){
     // (')
 
     int h = 23;
-    float aw = 2215.23f
-    bool oo = true;
+    float aw;
+    aw = 2215.23f;
+    bool woo;
+    woo = true;
 
     cout << h << endl;
     cout << typeid(h).name() << endl;
@@ -26,6 +28,6 @@ int main(){
     cout << aw << endl;
     cout << typeid(aw).name() << endl;
 
-    cout << oo << endl;
-    cout << typeid(oo).name() << endl;
+    cout << woo << endl;
+    cout << typeid(woo).name() << endl;
 }
