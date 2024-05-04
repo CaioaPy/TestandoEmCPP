@@ -16,8 +16,16 @@ int main(){
     'a', 'b', '6', 'L';
     // (')
 
-    int h;
-    h = 23;
+    int h = 23;
+    float aw = 2215.23f
+    bool oo = true;
 
     cout << h << endl;
+    cout << typeid(h).name() << endl;
+
+    cout << aw << endl;
+    cout << typeid(aw).name() << endl;
+
+    cout << oo << endl;
+    cout << typeid(oo).name() << endl;
 }
