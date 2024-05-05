@@ -10,7 +10,7 @@ int main() {
     cout << z * y << endl;
     cout << pow(2,3) << endl;
     float w = y / a; // when y(5) / a(2) theyre both ints, so even if w is a float it's gonna recieve 2 as value because 5/2 > 2.5 > int > 2 stored
-    cout << w << endl;
+    cout << "float (without using (float)): " << w << endl;
     float r = (float) y / a; // when (float) is used, y(5) is gonna get treated as a float, so 5/2 > 2.5 > float > 2.5 stored
-    cout << r << endl;
+    cout << "float (when using (float)): " << r << endl;
 }
