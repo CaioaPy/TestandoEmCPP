@@ -25,16 +25,16 @@ int main(){
     }
 }
 */
-int money = 674;
-if (money >= 1000){
-    cout << "you saved lots of money!" << endl;
-} else if (800 <= money < 1000){
-    cout << "you can live pretty well" << endl;
-} else if (500 <= money < 800){
-    cout << "you should sell your house" << endl;
-} else if (250 <= money < 500){
-    cout << "thats really bad.." << endl; 
-} else if (0 <= money < 250){
-    cout << "you just cant live with no money" << endl;
-}
+    int money = 674;
+    if (money >= 1000){
+        cout << "you saved lots of money!" << endl << "money: " << money << endl;
+    } else if (800 <= money < 1000){
+        cout << "you can live pretty well" << endl << "money: " << money << endl;
+    } else if (500 <= money < 800){
+        cout << "you should sell your house" << endl << "money: " << money << endl;
+    } else if (250 <= money < 500){
+        cout << "thats really bad.." << endl << "money: " << money << endl;
+    } else if (0 <= money < 250){
+        cout << "you just cant live with no money" << endl << "money: " << money << endl;
+    }
 }
