@@ -16,6 +16,7 @@ int main(){
     'a', 'b', '6', 'L';
     // (')
 
+    // testing outputs (ids and var print)
     int h = 23;
     float aw;
     aw = 2215.23f;
