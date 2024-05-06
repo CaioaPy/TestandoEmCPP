@@ -15,7 +15,10 @@ int main(){
     cout << "insert your sex: ";
     cin >> sex;
     */
-    cout << "insert your name, age and sex sepparated by spaces: ";
-    cin >> name >> age >> sex;
+    //cin >> name >> age >> sex;
+    cout << "insert your name: ";
+    getline(cin, name);
+    cout << "insert age and sex sepparated by spaces: ";
+    cin >> age >> sex;
     cout << "name: " << name << ", age: " << age << ", sex: " << sex << endl;
 }
