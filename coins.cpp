@@ -4,13 +4,12 @@
 using namespace std;
 
 int main(){
-    int a, b, c, d;
-    float starting_val, final_val;
+    float a, b, c, d, starting_val, final_val;
     cout << "enter the value you want (use . for decimal): ";
     cin >> starting_val;
     cout << "now, knowing that you have 4 types of coins, begin:" << endl;
     cout << "'a' = $0.50" << endl << "'b' = $0.25" << endl << "'c' = 0.10" << endl << "'d' = 0.01$" << endl;
-    cout << "represent your number, how many 'a' do you need?" endl;
+    cout << "represent your number, how many 'a' do you need?" << endl;
     cin >> a;
     cout << "how many 'b' do you need?" << endl;
     cin >> b;
