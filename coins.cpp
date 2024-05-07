@@ -10,14 +10,19 @@ int main(){
     cin >> starting_val >> endl;
     cout << "now, knowing that you have 4 types of coins, begin:" << endl;
     cout << "'a' = $0.50" << endl << "'b' = $0.25" << endl << "'c' = 0.10" << endl << "'d' = 0.01$" << endl;
-    cout << "represent your number, how many 'a' do you need?"
+    cout << "represent your number, how many 'a' do you need?";
     cin >> a;
-    cout << "how many 'b' do you need?"
+    cout << "how many 'b' do you need?" << endl;
     cin >> b;
-    cout << "how many 'c' do you need?"
+    cout << "how many 'c' do you need?" << endl;
     cin >> c;
-    cout << "how many 'd' do you need?"
+    cout << "how many 'd' do you need?" << endl;
     cin >> d;
     final_val = a + b + c + d;
-    
+    if (starting_val == final_val){
+        cout >> final_val >> "$, thats right!" << endl;
     }
+    else{
+        cout >> final_val >> "$, thats not right!" << endl;
+    }
+}
