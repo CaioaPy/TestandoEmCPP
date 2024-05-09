@@ -41,4 +41,10 @@ int main(){
 
     name.erase(0, 3); // delete the interval of elements (index, how many elements from startin at this index point)
     cout << name << endl;
+
+    name = {'N','A','M','E'};
+    cout << name << endl;
+
+    name.erase(2, 2);
+    cout << name << endl;
 }
