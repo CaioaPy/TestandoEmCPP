@@ -31,4 +31,14 @@ int main(){
 
     name.insert(0, "sup "); // (index position, string);
     cout << name << endl;
+
+    name.pop_back();
+    cout << name << endl; //delete the last element of the string
+    
+    name.pop_back();
+    name.pop_back();
+    cout << name << endl;
+
+    name.erase(0, 3); // delete the interval of elements (index, how many elements from startin at this index point)
+    cout << name << endl;
 }
