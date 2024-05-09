@@ -26,6 +26,9 @@ int main(){
     name = "C++" + name; // this is the same as name += "C++"
     cout << name << endl;
 
-    name.append(3, '.');
+    name.append(3, '.'); // (number of times the char is gonna be added, char)
+    cout << name << endl;
+
+    name.insert(0, "sup "); // (index position, string);
     cout << name << endl;
 }
