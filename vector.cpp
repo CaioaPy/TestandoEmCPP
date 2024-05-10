@@ -27,4 +27,11 @@ int main(){
     cout << tokens.back() << endl; // print the last element
     cout << tokens[0] << endl; // print the first element
     cout << tokens.front() << endl; // print the first element
+
+    cout << '{';
+    for (int token : tokens){
+        cout << token << ' ';
+    }
+    cout << '}' << endl;
+
 }
