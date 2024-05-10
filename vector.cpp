@@ -10,6 +10,8 @@ int main(){
     tokens.push_back(132);
     tokens.push_back(1512);
 
+    tokens[0] = 162; // you can also change a specifc index value
+
     cout << tokens.size() << endl;
     // cout << (tokens.size() == 0) << endl;
     cout << tokens.empty() << endl;
