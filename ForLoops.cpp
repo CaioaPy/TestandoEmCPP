@@ -2,6 +2,13 @@
 
 using namespace std;
 
+int factorial(int n, int factorial){
+    for (int i = 1; i <= n; i++){
+        factorial *= i;
+    }
+    return factorial;
+}
+
 int main() {
     int water = 0;
     
@@ -16,4 +23,6 @@ int main() {
     }
     cout << endl; 
     cout << water << " waters!" << endl;
+    int x = factorial(3, 1);
+    cout << x << endl;
 }
