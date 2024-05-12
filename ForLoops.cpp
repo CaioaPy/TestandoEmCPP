@@ -31,9 +31,15 @@ int main() {
     int x = factorial(3, 1);
     cout << "3! = " << x << endl;
     */
-
+    /*
     for (size_t i = 0; i < houses.size(); i++){
         cout << houses[i] << " ";
     }
     cout << endl;
+    */
+    for (int house : houses){
+        cout << house << " ";
+    }
+    cout << endl;
+
 }
