@@ -31,21 +31,32 @@ int main() {
     int x = factorial(3, 1);
     cout << "3! = " << x << endl;
     */
-    /*
+    cout << "befor:" << endl;
     for (size_t i = 0; i < houses.size(); i++){
         cout << houses[i] << " ";
     }
     cout << endl;
-    */
+    for (int house : houses){
+        house += 6;
+    }
+    cout << "after:" << endl;
+    for (size_t i = 0; i < houses.size(); i++){
+        cout << houses[i] << " ";
+    }
+    cout << endl;
+    cout << "when using for loops you modify the temp var not the vector"
+    
     /*
     for (int house : houses){
         cout << house << " ";
     }
     cout << endl;
     */
+    /*
     for (int i = houses.size()-1; i >= 0; i--){
         cout << houses[i] << " ";
     }
     cout << endl;
+    */
 
 }
