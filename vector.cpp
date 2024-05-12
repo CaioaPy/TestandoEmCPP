@@ -11,10 +11,11 @@ int main(){
     //tokens.push_back(1512);
     tokens.insert(tokens.begin(),17); // insert a element in the index 0 of the vector
     tokens.insert(tokens.begin() + 1,18); // insert a element in the index 1 of the vector
-    tokens.insert(tokens.end(),15); // insert a element in the last index of the vector
-    tokens.insert(tokens.end() - 1,14); // insert a element before the last index of the vector
+    tokens.insert(tokens.end(),15); // insert a elet a element before the last index of the vector
     //function pop_back removes the last element of the vector
-    //tokens.erase(tokens.begin()); // erase function removes an specific element from de vector
+    //tokens.erament in the last index of the vector
+    tokens.insert(tokens.end() - 1,14); // ivserse(tokens.begin()); 
+    // erase function removes an specific element from de vector
     //tokens.erase(tokens.begin(), tokens.end()); // erases the entire vector
     //tokens.clear() // also clear the entire vector
 
