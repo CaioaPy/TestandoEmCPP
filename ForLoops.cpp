@@ -37,8 +37,14 @@ int main() {
     }
     cout << endl;
     */
+    /*
     for (int house : houses){
         cout << house << " ";
+    }
+    cout << endl;
+    */
+    for (int i = houses.size()-1; i >= 0; i--){
+        cout << houses[i] << " ";
     }
     cout << endl;
 
