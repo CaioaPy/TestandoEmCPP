@@ -18,5 +18,4 @@ int main() {
         carry_load -= item_weight;
         cout << item << " was added to the backpack! \n" << carry_load << " spaces remaining" << "\n\n";
     }
-
 }
