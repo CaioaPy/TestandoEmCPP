@@ -11,6 +11,12 @@ int main() {
     for (int i = 0; i < items.size(); i++) {
         string item = items[i];
         int item_weight = ItemWeight[i];
-        cout << item << " was added to the backpack! \n" << carry_load << " spaces remaning" << "\n\n";
+        if (carry_load == 0){
+            cout << "can't store more items.\ncancelling the remain items";
+            break;
+        }
+        carry_load -= item_weight;
+        cout << item << " was added to the backpack! \n" << carry_load << " spaces remaining" << "\n\n";
     }
+
 }
