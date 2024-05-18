@@ -13,9 +13,9 @@ int main() {
                             {"Espanha", "EUR", "Euro"}
                         };
     for (int i = 0; i < 5; i++) {
-        cout << moedas[i][0] << " ";
-        cout << moedas[i][1] << " ";
-        cout << moedas[i][2] << endl;
+        for (int j = 0; j < 3; j++){
+            cout << moedas[i][j] << " ";
+        } 
+        cout << endl;
     }
-
 }
