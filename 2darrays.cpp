@@ -12,8 +12,10 @@ int main() {
                             {"RU", "GBP", "Libra"}, 
                             {"Espanha", "EUR", "Euro"}
                         };
-    cout << moedas[0][0]; << " "
-    cout << moedas[0][1]; << " "
-    cout << moedas[0][2]; 
+    for (int i = 0; i < 5; i++) {
+        cout << moedas[i][0] << " ";
+        cout << moedas[i][1] << " ";
+        cout << moedas[i][2] << endl;
+    }
 
 }
