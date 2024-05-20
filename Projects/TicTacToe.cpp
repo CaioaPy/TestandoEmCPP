@@ -34,37 +34,96 @@ int main() {
             case(1):
                 if (Board[0][0] == " 1 ") {
                     Board[0][0] = " X ";
+                    cout << endl;
                     break;
                 }
                 else
                     cout << "invalid move" << endl;
+                    cout << endl;
                     break;
             case(2):
-                cout << " a " << endl;
-                break;
+                if (Board[0][2] == " 2 ") {
+                    Board[0][2] = " X ";
+                    cout << endl;
+                    break;
+                }
+                else
+                    cout << "invalid move" << endl;
+                    cout << endl;
+                    break;
             case(3):
-                cout << " a " << endl;
-                break;
+                if (Board[0][4] == " 3 ") {
+                    Board[0][4] = " X ";
+                    cout << endl;
+                    break;
+                }
+                else
+                    cout << "invalid move" << endl;
+                    cout << endl;
+                    break;
             case(4):
-                cout << " a " << endl;
-                break;
+                if (Board[2][0] == " 4 ") {
+                    Board[2][0] = " X ";
+                    cout << endl;
+                    break;
+                }
+                else
+                    cout << "invalid move" << endl;
+                    cout << endl;
+                    break;
             case(5):
-                cout << " a " << endl;
-                break;
+                if (Board[2][2] == " 5 ") {
+                    Board[2][2] = " X ";
+                    cout << endl;
+                    break;
+                }
+                else
+                    cout << "invalid move" << endl;
+                    cout << endl;
+                    break;
             case(6):
-                cout << " a " << endl;
-                break;
+                if (Board[2][4] == " 6 ") {
+                    Board[2][4] = " X ";
+                    cout << endl;
+                    break;
+                }
+                else
+                    cout << "invalid move" << endl;
+                    cout << endl;
+                    break;
             case(7):
-                cout << " a " << endl;
-                break;
+                if (Board[4][0] == " 7 ") {
+                    Board[4][0] = " X ";
+                    cout << endl;
+                    break;
+                }
+                else
+                    cout << "invalid move" << endl;
+                    cout << endl;
+                    break;
             case(8):
-                cout << " a " << endl;
-                break;
+                if (Board[4][2] == " 8 ") {
+                    Board[4][2] = " X ";
+                    cout << endl;
+                    break;
+                }
+                else
+                    cout << "invalid move" << endl;
+                    cout << endl;
+                    break;
             case(9):
-                cout << " a " << endl;
-                break;
+                if (Board[4][4] == " 9 ") {
+                    Board[4][4] = " X ";
+                    cout << endl;
+                    break;
+                }
+                else
+                    cout << "invalid move" << endl;
+                    cout << endl;
+                    break;
             default:
                 cout << "error, try again" << endl;
+                cout << endl;
                 break;
         }
     } while (playing);
