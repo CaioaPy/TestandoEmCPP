@@ -12,6 +12,7 @@ int main() {
                         };
     int dec;
     bool playing = false;
+    bool no_win = false;
     cout << "each slot has a number that is assigned to himself" << endl;
     cout << "you're gonna use them to play, they are assigned like that:" << endl;
     for (int i = 0; i < 5; i++){
@@ -21,8 +22,10 @@ int main() {
     }
     cout << "you're going to play as X" << endl;
     cout << "\n\n\n\n\n";
-    playing = true;
+    no_win = true;
+    
     do {
+        playing = true
         for (int i = 0; i < 5; i++){
             for (int j = 0; j < 5; j++){
                 cout << Board[i][j] << " ";
