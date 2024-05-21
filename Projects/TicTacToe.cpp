@@ -157,14 +157,76 @@ int main() {
             x = rand() % 10;
             switch(x) {
                 case(1):
+                    if (not S1) {
+                        Board[0][0] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                        S1 = true;
+                        break;
+                    }
+                    else
+                        break;
                 case(2):
+                    if (not S2) {
+                        Board[0][2] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                        S2 = true;
+                        break;
+                    }
+                    else
+                        break;
                 case(3):
+                    if (not S3) {
+                        Board[0][4] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                        S3 = true;
+                        break;
+                    }
+                    else
+                        break;
                 case(4):
+                    if (not S4) {
+                        Board[2][0] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                        S4 = true;
+                        break;
+                    }
+                    else
+                        break;
                 case(5):
+                    if (not S5) {
+                        Board[2][2] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                    }
+                    else
+                        break;
                 case(6):
+                    if (not S6) {
+                        Board[2][4] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                    }
+                    else
+                        break;
                 case(7):
+                    if (not S7) {
+                        Board[4][0] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                    }
+                    else
+                        break;
                 case(8):
+                    if (not S8) {
+                        Board[4][2] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                    }
+                    else
+                        break;
                 case(9):
+                    if (not S9) {
+                        Board[4][4] = " O ";
+                        cout << "computer chooses 0!" << endl;
+                    }
+                    else
+                        break;
             }
 
         } while (computer_turn)
