@@ -23,6 +23,9 @@ int main() {
     bool S7 = false;
     bool S8 = false;
     bool S9 = false;
+    bool CWin = false;
+    bool PWin = false;
+    bool tie = false;
 
     cout << "each slot has a number that is assigned to himself" << endl;
     cout << "you're gonna use them to play, they are assigned like that:" << endl;
@@ -50,6 +53,7 @@ int main() {
                         Board[0][0] = " X ";
                         cout << endl;
                         S1 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -61,6 +65,7 @@ int main() {
                         Board[0][2] = " X ";
                         cout << endl;
                         S2 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -72,6 +77,7 @@ int main() {
                         Board[0][4] = " X ";
                         cout << endl;
                         S3 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -83,6 +89,7 @@ int main() {
                         Board[2][0] = " X ";
                         cout << endl;
                         S4 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -94,6 +101,7 @@ int main() {
                         Board[2][2] = " X ";
                         cout << endl;
                         S5 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -105,6 +113,7 @@ int main() {
                         Board[2][4] = " X ";
                         cout << endl;
                         S6 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -116,6 +125,7 @@ int main() {
                         Board[4][0] = " X ";
                         cout << endl;
                         S7 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -127,6 +137,7 @@ int main() {
                         Board[4][2] = " X ";
                         cout << endl;
                         S8 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -138,6 +149,7 @@ int main() {
                         Board[4][4] = " X ";
                         cout << endl;
                         S9 = true;
+                        playing = false;
                         break;
                     }
                     else
@@ -159,8 +171,9 @@ int main() {
                 case(1):
                     if (not S1) {
                         Board[0][0] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 1!" << endl;
                         S1 = true;
+                        computer_turn = false;
                         break;
                     }
                     else
@@ -168,8 +181,9 @@ int main() {
                 case(2):
                     if (not S2) {
                         Board[0][2] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 2!" << endl;
                         S2 = true;
+                        computer_turn = false;
                         break;
                     }
                     else
@@ -177,8 +191,9 @@ int main() {
                 case(3):
                     if (not S3) {
                         Board[0][4] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 3!" << endl;
                         S3 = true;
+                        computer_turn = false;
                         break;
                     }
                     else
@@ -186,8 +201,9 @@ int main() {
                 case(4):
                     if (not S4) {
                         Board[2][0] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 4!" << endl;
                         S4 = true;
+                        computer_turn = false;
                         break;
                     }
                     else
@@ -195,40 +211,67 @@ int main() {
                 case(5):
                     if (not S5) {
                         Board[2][2] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 5!" << endl;
+                        S5 = true;
+                        computer_turn = false;
+                        break;
                     }
                     else
                         break;
                 case(6):
                     if (not S6) {
                         Board[2][4] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 6!" << endl;
+                        S6 = true;
+                        computer_turn = false;
+                        break;
                     }
                     else
                         break;
                 case(7):
                     if (not S7) {
                         Board[4][0] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 7!" << endl;
+                        S7 = true;
+                        computer_turn = false;
+                        break;
                     }
                     else
                         break;
                 case(8):
                     if (not S8) {
                         Board[4][2] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 8!" << endl;
+                        S8 = true;
+                        computer_turn = false;
+                        break;
                     }
                     else
                         break;
                 case(9):
                     if (not S9) {
                         Board[4][4] = " O ";
-                        cout << "computer chooses 0!" << endl;
+                        cout << "computer chooses 9!" << endl;
+                        S9 = true;
+                        computer_turn = false;
+                        break;
                     }
                     else
                         break;
             }
+        } while (computer_turn);
 
-        } while (computer_turn)
+
+        
     } while  (no_win);
+
+    if (PWin) {
+        cout << "Player wins!" << endl;
+    }
+    else if (CWin) {
+        cout << "Computer wins!" << endl;
+    }
+    else if (tie) {
+        cout << "The game ends in tie" << endl;
+    }
 }   
