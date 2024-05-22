@@ -261,9 +261,36 @@ int main() {
             }
         } while (computer_turn);
 
+        else if (S1 && S2 && S3) {
 
-        
-    } while  (no_win);
+        }
+        else if (S4 && S5 && S6) {
+
+        }
+        else if (S7 && S8 && S9) {
+
+        }
+        else if (S1 && S4 && S7) {
+
+        }
+        else if (S2 && S5 && S8) {
+
+        }
+        else if (S3 && S6 && S9) {
+
+        }
+        else if (S1 && S5 && S9) {
+
+        }
+        else if (S3 && S5 && S7) {
+            
+        }
+
+        else if (S1 && S2 && S3 && S4 && S5 && S6 && S7 && S8 && S9){
+            tie = true;
+            break;
+        }
+    } while (no_win);
 
     if (PWin) {
         cout << "Player wins!" << endl;
