@@ -8,9 +8,9 @@ using namespace std;
 const int Board_size = 5;
 
 void printBoard(string Board[Board_size][Board_size]) {
-    for (int i = 0; i < BOARD_SIZE; i++) {
-        for (int j = 0; j < BOARD_SIZE; j++) {
-            cout << board[i][j] << " ";
+    for (int i = 0; i < Board_size; i++) {
+        for (int j = 0; j < Board_size; j++) {
+            cout << Board[i][j] << " ";
         } cout << endl;
     }
 } 
@@ -62,22 +62,16 @@ int main() {
 
     cout << "each slot has a number that is assigned to himself" << endl;
     cout << "you're gonna use them to play, they are assigned like that:" << endl;
-    for (int i = 0; i < 5; i++){
-        for (int j = 0; j < 5; j++){
-            cout << Board[i][j] << " ";
-        } cout << endl;
-    }
+    printBoard(Board);
     cout << "you're going to play as X" << endl;
     cout << "\n\n\n\n\n";
+
+    srand(time(0));
     no_win = true;
     do{
         do {
             playing = true;
-            for (int i = 0; i < 5; i++){
-                for (int j = 0; j < 5; j++){
-                    cout << Board[i][j] << " ";
-                } cout << endl;
-            }
+            printBoard(Board);
             cout << "your turn!" << endl;
             cin >> dec;
             switch(dec){
@@ -204,71 +198,12 @@ int main() {
                     break;
             }
         } while (playing);
+        
+        if (checkWin(S1, S2, S3, S4, S5, S6, S7, S8, S9, SS1, SS2, SS3, SS4, SS5, SS6, SS7, SS8, SS9, PWin, CWin)) {
+            no_win = false;
+            break;
+        }
 
-                if (S1 && S2 && S3) {
-            if (SS1 == 1 && SS2 == 1 && SS3 == 1) {
-                PWin = true;
-            }
-            else if (SS1 == 2 && SS2 == 2 && SS3 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S4 && S5 && S6) {
-            if (SS4 == 1 && SS5 == 1 && SS6 == 1) {
-                PWin = true;
-            }
-            else if (SS4 == 2 && SS5 == 2 && SS6 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S7 && S8 && S9) {
-            if (SS7 == 1 && SS8 == 1 && SS9 == 1) {
-                PWin = true;
-            }
-            else if (SS7 == 2 && SS8 == 2 && SS9 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S1 && S4 && S7) {
-            if (SS1 == 1 && SS4 == 1 && SS7 == 1) {
-                PWin = true;
-            }
-            else if (SS1 == 2 && SS4 == 2 && SS7 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S2 && S5 && S8) {
-            if (SS2 == 1 && SS5 == 1 && SS8 == 1) {
-                PWin = true;
-            }
-            else if (SS2 == 2 && SS5 == 2 && SS8 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S3 && S6 && S9) {
-            if (SS3 == 1 && SS6 == 1 && SS9 == 1) {
-                PWin = true;
-            }
-            else if (SS3 == 2 && SS6 == 2 && SS9 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S1 && S5 && S9) {
-            if (SS1 == 1 && SS5 == 1 && SS9 == 1) {
-                PWin = true;
-            }
-            else if (SS1 == 2 && SS5 == 2 && SS9 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S3 && S5 && S7) {
-            if (SS3 == 1 && SS5 == 1 && SS7 == 1) {
-                PWin = true;
-            }
-            else if (SS3 == 2 && SS5 == 2 && SS7 == 2) {
-                CWin = true;
-            }
-        }
         else if (S1 && S2 && S3 && S4 && S5 && S6 && S7 && S8 && S9){
             tie = true;
             break;
@@ -277,7 +212,7 @@ int main() {
         do {
             computer_turn = true;
             int x;
-            x = rand() % 10;
+            x = rand() % 9 + 1;
             switch(x) {
                 case(1):
                     if (not S1) {
@@ -381,74 +316,16 @@ int main() {
             }
         } while (computer_turn);
 
-        if (S1 && S2 && S3) {
-            if (SS1 == 1 && SS2 == 1 && SS3 == 1) {
-                PWin = true;
-            }
-            else if (SS1 == 2 && SS2 == 2 && SS3 == 2) {
-                CWin = true;
-            }
+        if (checkWin(S1, S2, S3, S4, S5, S6, S7, S8, S9, SS1, SS2, SS3, SS4, SS5, SS6, SS7, SS8, SS9, PWin, CWin)) {
+            no_win = false;
+            break;
         }
-        else if (S4 && S5 && S6) {
-            if (SS4 == 1 && SS5 == 1 && SS6 == 1) {
-                PWin = true;
-            }
-            else if (SS4 == 2 && SS5 == 2 && SS6 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S7 && S8 && S9) {
-            if (SS7 == 1 && SS8 == 1 && SS9 == 1) {
-                PWin = true;
-            }
-            else if (SS7 == 2 && SS8 == 2 && SS9 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S1 && S4 && S7) {
-            if (SS1 == 1 && SS4 == 1 && SS7 == 1) {
-                PWin = true;
-            }
-            else if (SS1 == 2 && SS4 == 2 && SS7 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S2 && S5 && S8) {
-            if (SS2 == 1 && SS5 == 1 && SS8 == 1) {
-                PWin = true;
-            }
-            else if (SS2 == 2 && SS5 == 2 && SS8 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S3 && S6 && S9) {
-            if (SS3 == 1 && SS6 == 1 && SS9 == 1) {
-                PWin = true;
-            }
-            else if (SS3 == 2 && SS6 == 2 && SS9 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S1 && S5 && S9) {
-            if (SS1 == 1 && SS5 == 1 && SS9 == 1) {
-                PWin = true;
-            }
-            else if (SS1 == 2 && SS5 == 2 && SS9 == 2) {
-                CWin = true;
-            }
-        }
-        else if (S3 && S5 && S7) {
-            if (SS3 == 1 && SS5 == 1 && SS7 == 1) {
-                PWin = true;
-            }
-            else if (SS3 == 2 && SS5 == 2 && SS7 == 2) {
-                CWin = true;
-            }
-        }
+        
         else if (S1 && S2 && S3 && S4 && S5 && S6 && S7 && S8 && S9){
             tie = true;
             break;
         }
+
     } while (no_win);
 
     if (PWin) {
