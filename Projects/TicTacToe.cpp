@@ -15,6 +15,26 @@ void printBoard(string Board[Board_size][Board_size]) {
     }
 } 
 
+bool checkWin(bool S1, bool S2, bool S3, bool S4, bool S5, bool S6, bool S7, bool S8, bool S9, 
+            int SS1, int SS2, int SS3, int SS4, int SS5, int SS6, int SS7, int SS8, int SS9, bool &PWin, bool &CWin) {
+    if ((S1 && S2 && S3 && SS1 == SS2 && SS2 == SS3) ||
+        (S4 && S5 && S6 && SS4 == SS5 && SS5 == SS6) ||
+        (S7 && S8 && S9 && SS7 == SS8 && SS8 == SS9) ||
+        (S1 && S4 && S7 && SS1 == SS4 && SS4 == SS7) ||
+        (S2 && S5 && S8 && SS2 == SS5 && SS5 == SS8) ||
+        (S3 && S6 && S9 && SS3 == SS6 && SS6 == SS9) ||
+        (S1 && S5 && S9 && SS1 == SS5 && SS5 == SS9) ||
+        (S3 && S5 && S7 && SS3 == SS5 && SS5 == SS7)) {
+        if (SS1 == 1 || SS2 == 1 || SS3 == 1 || SS4 == 1 || SS5 == 1 || SS6 == 1 || SS7 == 1 || SS8 == 1 || SS9 == 1) {
+            PWin = true;
+        } else {
+            CWin = true;
+        }
+        return true;
+    }
+    return false;
+}
+
 int main() {
     string Board [5][5] = { {" 1 ", "|", " 2 ", "|", " 3 "},
                             {"---", "-", "---", "-", "---"},
