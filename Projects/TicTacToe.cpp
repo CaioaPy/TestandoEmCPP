@@ -1,7 +1,19 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
+
+const int Board_size = 5;
+
+void printBoard(string Board[Board_size][Board_size]) {
+    for (int i = 0; i < BOARD_SIZE; i++) {
+        for (int j = 0; j < BOARD_SIZE; j++) {
+            cout << board[i][j] << " ";
+        } cout << endl;
+    }
+} 
 
 int main() {
     string Board [5][5] = { {" 1 ", "|", " 2 ", "|", " 3 "},
