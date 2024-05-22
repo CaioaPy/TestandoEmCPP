@@ -26,6 +26,7 @@ int main() {
     bool CWin = false;
     bool PWin = false;
     bool tie = false;
+    int SS1, SS2, SS3, SS4, SS5, SS6, SS7, SS8, SS9;
 
     cout << "each slot has a number that is assigned to himself" << endl;
     cout << "you're gonna use them to play, they are assigned like that:" << endl;
@@ -53,6 +54,7 @@ int main() {
                         Board[0][0] = " X ";
                         cout << endl;
                         S1 = true;
+                        SS1 = 1;
                         playing = false;
                         break;
                     }
@@ -65,6 +67,7 @@ int main() {
                         Board[0][2] = " X ";
                         cout << endl;
                         S2 = true;
+                        SS2 = 1;
                         playing = false;
                         break;
                     }
@@ -77,6 +80,7 @@ int main() {
                         Board[0][4] = " X ";
                         cout << endl;
                         S3 = true;
+                        SS3 = 1;
                         playing = false;
                         break;
                     }
@@ -88,6 +92,7 @@ int main() {
                     if (not S4 ) {
                         Board[2][0] = " X ";
                         cout << endl;
+                        SS4 = 1;
                         S4 = true;
                         playing = false;
                         break;
@@ -100,6 +105,7 @@ int main() {
                     if (not S5) {
                         Board[2][2] = " X ";
                         cout << endl;
+                        SS5 = 1;
                         S5 = true;
                         playing = false;
                         break;
@@ -112,6 +118,7 @@ int main() {
                     if (not S6) {
                         Board[2][4] = " X ";
                         cout << endl;
+                        SS6 = 1;
                         S6 = true;
                         playing = false;
                         break;
@@ -124,6 +131,7 @@ int main() {
                     if (not S7) {
                         Board[4][0] = " X ";
                         cout << endl;
+                        SS7 = 1;
                         S7 = true;
                         playing = false;
                         break;
@@ -136,6 +144,7 @@ int main() {
                     if (not S8) {
                         Board[4][2] = " X ";
                         cout << endl;
+                        SS8 = 1;
                         S8 = true;
                         playing = false;
                         break;
@@ -148,6 +157,7 @@ int main() {
                     if (not S9) {
                         Board[4][4] = " X ";
                         cout << endl;
+                        SS9 = 1;
                         S9 = true;
                         playing = false;
                         break;
@@ -173,6 +183,7 @@ int main() {
                         Board[0][0] = " O ";
                         cout << "computer chooses 1!" << endl;
                         S1 = true;
+                        SS1 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -183,6 +194,7 @@ int main() {
                         Board[0][2] = " O ";
                         cout << "computer chooses 2!" << endl;
                         S2 = true;
+                        SS2 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -193,6 +205,7 @@ int main() {
                         Board[0][4] = " O ";
                         cout << "computer chooses 3!" << endl;
                         S3 = true;
+                        SS3 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -203,6 +216,7 @@ int main() {
                         Board[2][0] = " O ";
                         cout << "computer chooses 4!" << endl;
                         S4 = true;
+                        SS4 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -213,6 +227,7 @@ int main() {
                         Board[2][2] = " O ";
                         cout << "computer chooses 5!" << endl;
                         S5 = true;
+                        SS5 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -223,6 +238,7 @@ int main() {
                         Board[2][4] = " O ";
                         cout << "computer chooses 6!" << endl;
                         S6 = true;
+                        SS6 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -233,6 +249,7 @@ int main() {
                         Board[4][0] = " O ";
                         cout << "computer chooses 7!" << endl;
                         S7 = true;
+                        SS7 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -243,6 +260,7 @@ int main() {
                         Board[4][2] = " O ";
                         cout << "computer chooses 8!" << endl;
                         S8 = true;
+                        SS8 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -253,6 +271,7 @@ int main() {
                         Board[4][4] = " O ";
                         cout << "computer chooses 9!" << endl;
                         S9 = true;
+                        SS9 = 2;
                         computer_turn = false;
                         break;
                     }
@@ -262,7 +281,12 @@ int main() {
         } while (computer_turn);
 
         else if (S1 && S2 && S3) {
-
+            if (SS1 == 1 && SS2 == 1 && SS3 == 1) {
+                PWin = true;
+            }
+            else if (SS1 == 2 && SS2 == 2 && SS3 == 2) {
+                CWin = true;
+            }
         }
         else if (S4 && S5 && S6) {
 
@@ -283,7 +307,7 @@ int main() {
 
         }
         else if (S3 && S5 && S7) {
-            
+
         }
 
         else if (S1 && S2 && S3 && S4 && S5 && S6 && S7 && S8 && S9){
