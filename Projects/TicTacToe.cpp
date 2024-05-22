@@ -173,6 +173,75 @@ int main() {
             }
         } while (playing);
 
+                if (S1 && S2 && S3) {
+            if (SS1 == 1 && SS2 == 1 && SS3 == 1) {
+                PWin = true;
+            }
+            else if (SS1 == 2 && SS2 == 2 && SS3 == 2) {
+                CWin = true;
+            }
+        }
+        else if (S4 && S5 && S6) {
+            if (SS4 == 1 && SS5 == 1 && SS6 == 1) {
+                PWin = true;
+            }
+            else if (SS4 == 2 && SS5 == 2 && SS6 == 2) {
+                CWin = true;
+            }
+        }
+        else if (S7 && S8 && S9) {
+            if (SS7 == 1 && SS8 == 1 && SS9 == 1) {
+                PWin = true;
+            }
+            else if (SS7 == 2 && SS8 == 2 && SS9 == 2) {
+                CWin = true;
+            }
+        }
+        else if (S1 && S4 && S7) {
+            if (SS1 == 1 && SS4 == 1 && SS7 == 1) {
+                PWin = true;
+            }
+            else if (SS1 == 2 && SS4 == 2 && SS7 == 2) {
+                CWin = true;
+            }
+        }
+        else if (S2 && S5 && S8) {
+            if (SS2 == 1 && SS5 == 1 && SS8 == 1) {
+                PWin = true;
+            }
+            else if (SS2 == 2 && SS5 == 2 && SS8 == 2) {
+                CWin = true;
+            }
+        }
+        else if (S3 && S6 && S9) {
+            if (SS3 == 1 && SS6 == 1 && SS9 == 1) {
+                PWin = true;
+            }
+            else if (SS3 == 2 && SS6 == 2 && SS9 == 2) {
+                CWin = true;
+            }
+        }
+        else if (S1 && S5 && S9) {
+            if (SS1 == 1 && SS5 == 1 && SS9 == 1) {
+                PWin = true;
+            }
+            else if (SS1 == 2 && SS5 == 2 && SS9 == 2) {
+                CWin = true;
+            }
+        }
+        else if (S3 && S5 && S7) {
+            if (SS3 == 1 && SS5 == 1 && SS7 == 1) {
+                PWin = true;
+            }
+            else if (SS3 == 2 && SS5 == 2 && SS7 == 2) {
+                CWin = true;
+            }
+        }
+        else if (S1 && S2 && S3 && S4 && S5 && S6 && S7 && S8 && S9){
+            tie = true;
+            break;
+        }
+
         do {
             computer_turn = true;
             int x;
@@ -280,7 +349,7 @@ int main() {
             }
         } while (computer_turn);
 
-        else if (S1 && S2 && S3) {
+        if (S1 && S2 && S3) {
             if (SS1 == 1 && SS2 == 1 && SS3 == 1) {
                 PWin = true;
             }
@@ -289,27 +358,61 @@ int main() {
             }
         }
         else if (S4 && S5 && S6) {
-
+            if (SS4 == 1 && SS5 == 1 && SS6 == 1) {
+                PWin = true;
+            }
+            else if (SS4 == 2 && SS5 == 2 && SS6 == 2) {
+                CWin = true;
+            }
         }
         else if (S7 && S8 && S9) {
-
+            if (SS7 == 1 && SS8 == 1 && SS9 == 1) {
+                PWin = true;
+            }
+            else if (SS7 == 2 && SS8 == 2 && SS9 == 2) {
+                CWin = true;
+            }
         }
         else if (S1 && S4 && S7) {
-
+            if (SS1 == 1 && SS4 == 1 && SS7 == 1) {
+                PWin = true;
+            }
+            else if (SS1 == 2 && SS4 == 2 && SS7 == 2) {
+                CWin = true;
+            }
         }
         else if (S2 && S5 && S8) {
-
+            if (SS2 == 1 && SS5 == 1 && SS8 == 1) {
+                PWin = true;
+            }
+            else if (SS2 == 2 && SS5 == 2 && SS8 == 2) {
+                CWin = true;
+            }
         }
         else if (S3 && S6 && S9) {
-
+            if (SS3 == 1 && SS6 == 1 && SS9 == 1) {
+                PWin = true;
+            }
+            else if (SS3 == 2 && SS6 == 2 && SS9 == 2) {
+                CWin = true;
+            }
         }
         else if (S1 && S5 && S9) {
-
+            if (SS1 == 1 && SS5 == 1 && SS9 == 1) {
+                PWin = true;
+            }
+            else if (SS1 == 2 && SS5 == 2 && SS9 == 2) {
+                CWin = true;
+            }
         }
         else if (S3 && S5 && S7) {
-
+            if (SS3 == 1 && SS5 == 1 && SS7 == 1) {
+                PWin = true;
+            }
+            else if (SS3 == 2 && SS5 == 2 && SS7 == 2) {
+                CWin = true;
+            }
         }
-
         else if (S1 && S2 && S3 && S4 && S5 && S6 && S7 && S8 && S9){
             tie = true;
             break;
