@@ -19,13 +19,10 @@ float MediaNota(){
 }
 
 void NovoCadastro(){
+
 }
 
 int main() {
-    vector<vector<string>> Alunos = {   
-                                        {"Henry"},
-                                        {"Mary"},
-    };
     float media = MediaNota();
     cout << media << endl;
 }
