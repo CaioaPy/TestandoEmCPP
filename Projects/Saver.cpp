@@ -19,10 +19,23 @@ float MediaNota(){
 }
 
 void NovoCadastro(){
-
+    string nome;
+    int idade, matricula;
+    cout << "insert the name: " << endl;
+    cin >> nome;
+    cout << "insert the age: " << endl;
+    cin >> idade;
+    cout << "insert the registration number: " << endl;
+    cin >> matricula;
+    float media = MediaNota();
+    cout << "--NOVO CADASTRO CRIADO--" << endl;
+    cout << "Name: " << nome << endl;
+    cout << "Age: " << idade << endl;
+    cout << "Registration number: " << matricula << endl;
+    cout << "Grade: " << media << endl;
+    cout << "------------------------" << endl;
 }
 
 int main() {
-    float media = MediaNota();
-    cout << media << endl;
+    NovoCadastro();
 }
