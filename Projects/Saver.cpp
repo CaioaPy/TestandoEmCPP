@@ -7,7 +7,8 @@ Armazene os dados em um arquivo para persistência de dados.
 using namespace std;
 
 float MediaNota(float nota1, float nota2){
-
+    float x = (nota1 + nota2) / 2;
+    return x;
 }
 
 int main() {
@@ -16,4 +17,6 @@ int main() {
     cin >> nota1;
     cout << "insert the second grade: " << endl;
     cin >> nota2;
-    }
+    float media = MediaNota(nota1, nota2);
+    cout << media << endl;
+}
