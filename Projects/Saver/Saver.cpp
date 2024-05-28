@@ -5,8 +5,12 @@ Armazene os dados em um arquivo para persistência de dados.
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 
 using namespace std;
+
+ofstream Save("save.txt");
+string linha;
 
 float MediaNota(){
     float nota1, nota2;
@@ -34,8 +38,36 @@ void NovoCadastro(){
     cout << "Registration number: " << matricula << endl;
     cout << "Grade: " << media << endl;
     cout << "------------------------" << endl;
+    Save << "------------------------";
+    Save << "Name: " << nome;
+    Save << "Age: " << idade;
+    Save << "Registration number: " << matricula;
+    Save << "Grade: " << media;
+    Save << "------------------------";
+    Save.close();
 }
 
 int main() {
-    NovoCadastro();
+    char x;
+    bool loop = false;
+    cout << "(1) See the registers"
+    cout << "(2) New register"
+    cout << "(3) Update register"
+    cout << "(4) Delete register"
+    do{
+        switch(x) {
+            case(1):
+        
+            case(2):
+                NovoCadastro();
+                break;
+            case(3):
+
+            case(4):
+
+            default:
+                cout >> "error, try again!"
+                break;
+        }
+    } while (loop);
 }
