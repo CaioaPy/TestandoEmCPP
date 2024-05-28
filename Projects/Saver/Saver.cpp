@@ -50,24 +50,36 @@ void NovoCadastro(){
 int main() {
     char x;
     bool loop = false;
-    cout << "(1) See the registers"
-    cout << "(2) New register"
-    cout << "(3) Update register"
-    cout << "(4) Delete register"
+    cout << "(1) See the registers" << endl;
+    cout << "(2) New register" << endl;
+    cout << "(3) Update register" << endl;
+    cout << "(4) Delete register" << endl;
     do{
         switch(x) {
             case(1):
-        
+                break;
             case(2):
                 NovoCadastro();
                 break;
             case(3):
-
+                break;
             case(4):
-
+                break;
             default:
-                cout >> "error, try again!"
+                cout << "error, try again!" << endl;
                 break;
         }
+        cout << "do you wanna do another thing? (Y/N)" << endl;
+        cin >> dec;
+        if (dec == "Y"){
+            loop = true;
+        }
+        else if (dec == "N"){
+            loop = false;
+        }
+        else {
+            cout << "Ok! All done!" << endl;
+        }
+
     } while (loop);
 }
