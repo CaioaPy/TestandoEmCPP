@@ -22,6 +22,15 @@ float MediaNota(){
     return x;
 }
 
+void VerCadastros(){
+    string linha;
+    ifstream Save("save.txt");
+    while(getline(Save, linha)){
+        cout << linha;
+    Save.close();
+    }
+}
+
 void NovoCadastro(){
     string nome;
     int idade, matricula;
@@ -59,6 +68,7 @@ int main() {
             cin >> x;
             switch(x) {
                 case(1):
+                    VerCadastros();
                     break;
                 case(2):
                     NovoCadastro();
