@@ -20,13 +20,13 @@ float MediaNota(){
 }
 
 void VerCadastros(){
-    ifstream Save("save.txt");
+    string save = "save.txt";
+    ifstream Read(save);
     string linha;
-    Save.open("save.txt");
-    while(getline(Save, linha)){
-        cout << linha;
-    Save.close();
-    }
+    while(getline(Read, linha)){
+        cout << linha << endl;
+    } 
+    Read.close();
 }
 
 void NovoCadastro(){
@@ -47,11 +47,11 @@ void NovoCadastro(){
     cout << "Registration number: " << matricula << endl;
     cout << "Grade: " << media << endl;
     cout << "------------------------" << endl;
-    Save << "------------------------";
-    Save << "Name: " << nome;
-    Save << "Age: " << idade;
-    Save << "Registration number: " << matricula;
-    Save << "Grade: " << media;
+    Save << "------------------------" << endl;
+    Save << "Name: " << nome << endl;
+    Save << "Age: " << idade << endl;
+    Save << "Registration number: " << matricula << endl;
+    Save << "Grade: " << media << endl;
     Save.close();
 }
 
