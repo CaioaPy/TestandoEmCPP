@@ -9,9 +9,6 @@ Armazene os dados em um arquivo para persistência de dados.
 
 using namespace std;
 
-ofstream Save("save.txt");
-string linha;
-
 float MediaNota(){
     float nota1, nota2;
     cout << "insert the first grade: " << endl;
@@ -23,8 +20,9 @@ float MediaNota(){
 }
 
 void VerCadastros(){
-    string linha;
     ifstream Save("save.txt");
+    string linha;
+    Save.open("save.txt");
     while(getline(Save, linha)){
         cout << linha;
     Save.close();
@@ -32,6 +30,8 @@ void VerCadastros(){
 }
 
 void NovoCadastro(){
+    string save = "save.txt";
+    ofstream Save(save);
     string nome;
     int idade, matricula;
     cout << "insert the name: " << endl;
@@ -52,7 +52,6 @@ void NovoCadastro(){
     Save << "Age: " << idade;
     Save << "Registration number: " << matricula;
     Save << "Grade: " << media;
-    Save << "------------------------";
     Save.close();
 }
 
