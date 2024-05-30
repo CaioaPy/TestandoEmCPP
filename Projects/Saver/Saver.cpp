@@ -25,7 +25,7 @@ void VerCadastros(){
     string linha;
     while(getline(Read, linha)){
         cout << linha << endl;
-    } 
+    }
     Read.close();
 }
 
@@ -55,15 +55,18 @@ void NovoCadastro(){
     Save.close();
 }
 
+void Editar(){ 
+
+}
+
 int main() {
     bool loop = false;
     int x;
     char dec;
-        do{
+    do{
         cout << "(1) See the registers" << endl;
         cout << "(2) New register" << endl;
         cout << "(3) Update register" << endl;
-        cout << "(4) Delete register" << endl;
             cin >> x;
             switch(x) {
                 case(1):
@@ -73,8 +76,6 @@ int main() {
                     NovoCadastro();
                     break;
                 case(3):
-                    break;
-                case(4):
                     break;
                 default:
                     cout << "error, try again." << endl;
