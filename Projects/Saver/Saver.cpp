@@ -55,8 +55,17 @@ void NovoCadastro(){
     Save.close();
 }
 
-void Editar(){ 
-
+void Editar() {
+    string save = "save.txt";
+    ifstream Read(save);
+    string linha;
+    int i = 0;
+    cout << "Current file:" << endl;
+    while(getline(Read, linha)) {
+        i++;
+        cout << "[" << i << "] " << linha << endl;
+    }
+    Read.close();
 }
 
 int main() {
@@ -70,12 +79,16 @@ int main() {
             cin >> x;
             switch(x) {
                 case(1):
+                    cout << endl;
                     VerCadastros();
                     break;
                 case(2):
+                    cout << endl;
                     NovoCadastro();
                     break;
                 case(3):
+                    cout << endl;
+                    Editar();
                     break;
                 default:
                     cout << "error, try again." << endl;
