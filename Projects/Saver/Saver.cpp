@@ -6,6 +6,7 @@ Armazene os dados em um arquivo para persistência de dados.
 #include <vector>
 #include <string>
 #include <fstream>
+#include <limits>
 
 using namespace std;
 
@@ -29,7 +30,8 @@ void VerCadastros(){
     Read.close();
 }
 
-void AbrirSave(){
+void NovoCadastro(){
+    //get the entire file
     string save = "save.txt";
     ifstream Read(save);
     string linha;
@@ -40,11 +42,6 @@ void AbrirSave(){
         i++;
     }
     Read.close();
-}
-
-void NovoCadastro(){
-    //get the entire file
-    AbrirSave()
     //
     ofstream Save(save);
     string nome;
@@ -63,10 +60,9 @@ void NovoCadastro(){
     cout << "Age: " << idade << endl;
     arr.push_back("Age: " + to_string(idade));
     cout << "Registration number: " << matricula << endl;
-    arr.push_back("Registration number: " + matricula);
+    arr.push_back("Registration number: " + to_string(matricula));
     cout << "Grade: " << media << endl;
-    string mediastr = to_string(media);
-    arr.push_back("Grade: " + mediastr);
+    arr.push_back("Grade: " + to_string(media));
     cout << "------------------------" << endl;
     for (const string& line : arr) {
         Save << line << endl;
@@ -91,11 +87,14 @@ void Editar() {
     do {
         int x;
         string newText;
-        cout << "Which line do you want to edit? (write the entire line)";
+        cout << "Which line do you want to edit?" << endl;
         cin >> x;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cout << arr[x] << endl;
+        cout << "this is the line righ now, write the new entire line for update" << endl;
         getline(cin, newText);
         arr[x] = newText;
+
         cout << "do you wanna edit another line? (Y/N)" << endl;
         char dec;
         cin >> dec;
@@ -111,6 +110,11 @@ void Editar() {
                 cout << "error, try again." << endl;
         }
     } while (loop);
+    ofstream Save(save);
+    for (const string& line : arr) {
+        Save << line << endl;
+    }
+    Save.close();
 }
 
 int main() {
