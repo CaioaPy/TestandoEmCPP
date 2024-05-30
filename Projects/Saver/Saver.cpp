@@ -29,8 +29,7 @@ void VerCadastros(){
     Read.close();
 }
 
-void NovoCadastro(){
-    //get the entire file
+void AbrirSave(){
     string save = "save.txt";
     ifstream Read(save);
     string linha;
@@ -41,9 +40,13 @@ void NovoCadastro(){
         i++;
     }
     Read.close();
+}
+
+void NovoCadastro(){
+    //get the entire file
+    AbrirSave()
     //
     ofstream Save(save);
-    Save.open(save);
     string nome;
     int idade, matricula;
     cout << "insert the name: " << endl;
@@ -58,15 +61,15 @@ void NovoCadastro(){
     cout << "Name: " << nome << endl;
     arr.push_back("Name: " + nome);
     cout << "Age: " << idade << endl;
-    arr.push_back("Age: " + idade);
+    arr.push_back("Age: " + to_string(idade));
     cout << "Registration number: " << matricula << endl;
     arr.push_back("Registration number: " + matricula);
     cout << "Grade: " << media << endl;
     string mediastr = to_string(media);
     arr.push_back("Grade: " + mediastr);
     cout << "------------------------" << endl;
-    for (int j = 0; j < 6; j++){
-        Save << arr[j] << endl;
+    for (const string& line : arr) {
+        Save << line << endl;
     }
     Save.close();
 }
@@ -137,6 +140,7 @@ int main() {
             }
         cout << "do you wanna do another thing? (Y/N)" << endl;
         cin >> dec;
+        cout << endl;
         switch(dec) {
             case('Y'):
                 loop = true;
