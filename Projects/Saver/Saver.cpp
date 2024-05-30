@@ -60,12 +60,17 @@ void Editar() {
     ifstream Read(save);
     string linha;
     int i = 0;
+    string arr[][2] = {{}};
     cout << "Current file:" << endl;
     while(getline(Read, linha)) {
-        i++;
         cout << "[" << i << "] " << linha << endl;
+        arr[i][i] = linha;
+        i++;
     }
     Read.close();
+    int x;
+    cin >> x;
+    cout << arr[x][x];
 }
 
 int main() {
