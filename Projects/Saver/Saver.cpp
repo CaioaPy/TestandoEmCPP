@@ -68,9 +68,30 @@ void Editar() {
         i++;
     }
     Read.close();
-    int x;
-    cin >> x;
-    cout << arr[x] << endl;;
+    bool loop = false;
+    do {
+        int x;
+        string newText;
+        cout << "Which line do you want to edit? (write the entire line)";
+        cin >> x;
+        cout << arr[x] << endl;
+        getline(cin, newText);
+        arr[x] = newText;
+        cout << "do you wanna edit another line? (Y/N)" << endl;
+        char dec;
+        cin >> dec;
+        switch(dec) {
+            case('Y'):
+                loop = true;
+                break;
+            case('N'):
+                cout << "Ok! All done!" << endl;
+                loop = false;
+                break;
+            default:
+                cout << "error, try again." << endl;
+        }
+    } while (loop);
 }
 
 int main() {
