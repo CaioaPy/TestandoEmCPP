@@ -1,0 +1,15 @@
+------------------------
+Name: test
+Age: 0
+Registration number: 0001
+Grade: 8.625000
+------------------------
+Name: test2
+Age: 0
+Registration number: 0002
+Grade: 8.000000
+------------------------
+Name: test3
+Age: 0
+Registration number: 0003
+Grade: 10.000000
