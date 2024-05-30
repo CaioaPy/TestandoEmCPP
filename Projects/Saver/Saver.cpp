@@ -30,8 +30,20 @@ void VerCadastros(){
 }
 
 void NovoCadastro(){
+    //get the entire file
     string save = "save.txt";
+    ifstream Read(save);
+    string linha;
+    int i = 0;
+    vector<string> arr;
+    while(getline(Read, linha)) {
+        arr.push_back(linha);
+        i++;
+    }
+    Read.close();
+    //
     ofstream Save(save);
+    Save.open(save);
     string nome;
     int idade, matricula;
     cout << "insert the name: " << endl;
@@ -42,16 +54,20 @@ void NovoCadastro(){
     cin >> matricula;
     float media = MediaNota();
     cout << "--NOVO CADASTRO CRIADO--" << endl;
+    arr.push_back("------------------------");
     cout << "Name: " << nome << endl;
+    arr.push_back("Name: " + nome);
     cout << "Age: " << idade << endl;
+    arr.push_back("Age: " + idade);
     cout << "Registration number: " << matricula << endl;
+    arr.push_back("Registration number: " + matricula);
     cout << "Grade: " << media << endl;
+    string mediastr = to_string(media);
+    arr.push_back("Grade: " + mediastr);
     cout << "------------------------" << endl;
-    Save << "------------------------" << endl;
-    Save << "Name: " << nome << endl;
-    Save << "Age: " << idade << endl;
-    Save << "Registration number: " << matricula << endl;
-    Save << "Grade: " << media << endl;
+    for (int j = 0; j < 6; j++){
+        Save << arr[j] << endl;
+    }
     Save.close();
 }
 
