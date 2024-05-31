@@ -7,6 +7,8 @@
 
 using namespace std;
 
+
+
 int RNG() {
     int x;
     srand(time(0));
@@ -15,6 +17,14 @@ int RNG() {
 }
 
 int main() {
+    string boneco[][1] =   {{""},
+                            {""},
+                            {""}
+                        };
     int x = RNG();
     cout << x << endl;
+    for (int i = 0; i < 3; i++){
+        int j = 0;
+        cout << boneco[i][j] << endl;
+    }
 }
