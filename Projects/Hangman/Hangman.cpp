@@ -35,6 +35,10 @@ int main() {
     int t = word.length();
     char* word_array = new char[t + 1];
     strcpy(word_array, word.c_str());
+    char word_holder = new char[t + 1];
+    for (int i = 0; i < t; i++){
+        word_holder[i] = '_';
+    }
     cout << x << endl;
     cout << word << endl;
     cout << word_array[2];
