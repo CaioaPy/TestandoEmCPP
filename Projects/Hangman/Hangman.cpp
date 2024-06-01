@@ -45,20 +45,21 @@ int main() {
     for (int i = 0; i < t; i++){
         cout << word_holder[i];
     } cout << endl;
-    char letter;
+    string letter;
     bool accepted = false;
     cout << "enter one letter: " << endl; 
     do {
-        cin >> letter;
-        switch (letter){
-            case(1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 0):
-                    cout << "error" << endl;
-                    cout << "a" << endl;
-                    accepted = false;
-                    break;
-            default:
-                accepted = true;
-                break;
+        getline(cin, letter);
+        if (letter.size() != 1){
+            cout << "enter just one letter, try again" << endl;
+            accepted = false;
+        }
+        else if (letter == "1" || letter == "2" || letter == "3" || letter == "4" || letter == "5" || letter == "6" || letter == "7" || letter == "8" || letter == "9" || letter == "0") {
+            cout << "enter only a letter, try again" << endl;
+            accepted = false;
+        }
+        else{
+            accepted = true;
         }
     } while (!accepted);
     cout << accepted << endl;
