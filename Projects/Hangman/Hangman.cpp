@@ -5,6 +5,7 @@
 #include <string>
 #include <ctime>
 #include <cstring>
+#include <cctype>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ using namespace std;
 int RNG() {
     int x;
     srand(time(0));
-    x = (rand() % 3);
+    x = (rand() % 4);
     return x;
 }
 
@@ -36,15 +37,11 @@ int main() {
     int t = word.length();
     char* word_array = new char[t + 1];
     strcpy(word_array, word.c_str());
-    string word_holder[] = {"_","_"};
+    string word_holder(t, '_');
+    //testing only
     cout << x << endl;
     cout << word << endl;
-    for (int i = 0; i < t; i++){
-        word_array[i];
-    }
-    for (int i = 0; i < t; i++){
-        word_holder[i] = "_";
-    }
+    //testing only
     for (int i = 0; i < t; i++){
         cout << word_holder[i];
     } cout << endl;
@@ -66,10 +63,11 @@ int main() {
             letter = tolower(letter[0]);
         }
     } while (!accepted);
+
     for (int i = 0; i < t; i++){
-        string c = word_array[i];
-        if (letter == c){
-            word_holder[i] = letter;
+        char c = word_array[i];
+        if (letter[0] == c){
+            word_holder[i] = letter[0];
         }
     }
     for (int i = 0; i < t; i++){
