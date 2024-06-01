@@ -30,6 +30,7 @@ int main() {
                             {""}
                            };
     int x = RNG();
+    int errors = 0;
     string words [4] = {"water", "sugar", "fire", "monster"};
     string word = words[x];
     int t = word.length();
@@ -45,9 +46,17 @@ int main() {
         cout << word_holder[i];
     } cout << endl;
     char letter;
-    bool accepted;
+    bool accepted = false;
     cout << "enter one letter: " << endl; 
-    cin >> letter;
-    
+    do {
+        cin >> letter;
+        if (letter == 1 || letter == 2 || letter == 3 || letter == 4 || letter == 5 || letter == 6 || letter == 7 || letter == 8 || letter == 9 || letter == 0) {
+            cout << "error" << endl;
+            accepted = false;
+        }
+        else {
+            accepted = true;
+        }
+    } while (!accepted);
     
 }
