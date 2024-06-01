@@ -40,6 +40,9 @@ int main() {
     cout << x << endl;
     cout << word << endl;
     for (int i = 0; i < t; i++){
+        word_array[i];
+    }
+    for (int i = 0; i < t; i++){
         word_holder[i] = "_";
     }
     for (int i = 0; i < t; i++){
@@ -60,8 +63,16 @@ int main() {
         }
         else{
             accepted = true;
+            letter = tolower(letter[0]);
         }
     } while (!accepted);
-    cout << accepted << endl;
-    
+    for (int i = 0; i < t; i++){
+        string c = word_array[i];
+        if (letter == c){
+            word_holder[i] = letter;
+        }
+    }
+    for (int i = 0; i < t; i++){
+        cout << word_holder[i];
+    } cout << endl;
 }
