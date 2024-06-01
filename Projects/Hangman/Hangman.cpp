@@ -27,6 +27,7 @@ int main() {
     char* word_array = new char[t + 1];
     strcpy(word_array, word.c_str());
     string word_holder(t, '_');
+    char letters[] = {};
     //testing only
     cout << x << endl;
     cout << word << endl;
@@ -42,6 +43,7 @@ int main() {
         cout << "enter one letter: " << endl; 
         do {
             getline(cin, letter);
+            string lettersStr = letters;
             if (letter.size() != 1){
                 cout << "enter just one letter, try again" << endl;
                 accepted = false;
@@ -50,17 +52,29 @@ int main() {
                 cout << "enter only a letter, try again" << endl;
                 accepted = false;
             }
+            else if (lettersStr.find(letter)){
+                cout << "you already tried this word! try again!" << endl;
+            }
             else{
                 accepted = true;
                 letter = tolower(letter[0]);
+                char* r = letter[0];
+                strcpy(letters, r);
             }
         } while (!accepted);
-
+        bool inWord = false;
         for (int i = 0; i < t; i++){
             char c = word_array[i];
             if (letter[0] == c){
                 word_holder[i] = letter[0];
+                inWord = true;
             }
+        }
+        if (inWord) {
+            cout << "Nice!" << endl;
+        }
+        else {
+            cout << "Not in the word!" << endl;
         }
 
         if (word_holder == word_array){
