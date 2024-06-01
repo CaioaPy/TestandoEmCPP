@@ -33,6 +33,7 @@ int main() {
     cout << word << endl;
     //testing only
     bool incomplete = true;
+    int l = 0;
     do{
         for (int i = 0; i < t; i++){
             cout << word_holder[i];
@@ -58,10 +59,10 @@ int main() {
             else{
                 accepted = true;
                 letter = tolower(letter[0]);
-                char* r = letter[0];
-                strcpy(letters, r);
+                letters[l] = letter[0];
             }
         } while (!accepted);
+        l++;
         bool inWord = false;
         for (int i = 0; i < t; i++){
             char c = word_array[i];
