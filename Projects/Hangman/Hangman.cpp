@@ -91,9 +91,17 @@ int main() {
         else {
             incomplete = true;
         }
-        else if (errors == 5){
+        else if (errors == 5) {
             incomplete = false;
             lose = true;
         }
     } while (incomplete);
+    if (lose) {
+        int holder;
+        cout << "you lose!" << endl;
+        cout << "press enter to exit." << endl;
+        cin >> holder;
+    }
+    else {
+    }
 }
