@@ -103,5 +103,9 @@ int main() {
         cin >> holder;
     }
     else {
+        int holder;
+        cout << "you win!" << endl;
+        cout << "press enter to exit." << endl;
+        cin >> holder;
     }
 }
