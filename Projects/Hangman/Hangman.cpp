@@ -79,14 +79,21 @@ int main() {
         }
         else {
             cout << "Not in the word!" << endl;
+            cout << "errors: " << errors << endl;
+            cout << endl;
             errors++;
         }
-
+        
+        bool lose = false;
         if (word_holder == word){
             incomplete = false;
         }
         else {
             incomplete = true;
+        }
+        else if (errors == 5){
+            incomplete = false;
+            lose = true;
         }
     } while (incomplete);
 }
