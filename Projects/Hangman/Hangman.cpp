@@ -7,6 +7,7 @@
 #include <cstring>
 #include <cctype>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -22,13 +23,14 @@ int RNG() {
 int main() {
     int x = RNG();
     int errors = 0;
+    const int max_errors = 5;
     string words [4] = {"water", "sugar", "fire", "monster"};
     string word = words[x];
     int t = word.length();
     char* word_array = new char[t + 1];
     strcpy(word_array, word.c_str());
+    vector<char> guessed_letters;
     string word_holder(t, '_');
-    char letters[] = {};
     //testing only
     cout << x << endl;
     cout << word << endl;
@@ -36,16 +38,15 @@ int main() {
     bool incomplete = true;
     int l = 0;
     do{
-        for (int i = 0; i < t; i++){
-            cout << word_holder[i];
-        } cout << endl;
+        for (int i = 0; i < t; i++) {
+            cout << word_holder[i] << ' ';
+        }
         cout << endl;
         string letter;
         bool accepted = false;
         cout << "enter one letter: " << endl; 
         do {
             getline(cin, letter);
-            string lettersStr = letters;
             if (letter.size() != 1){
                 cout << "enter just one letter, try again" << endl;
                 accepted = false;
@@ -54,20 +55,21 @@ int main() {
                 cout << "enter only a letter, try again" << endl;
                 accepted = false;
             }
-            else if (not lettersStr.find(letter)){
-                cout << "you already tried this letter! try again!" << endl;
-            }
             else{
-                accepted = true;
-                letter = tolower(letter[0]);
-                letters[l] = letter[0];
+                letter[0] = tolower(letter[0]);
+                if (find(guessed_letters.begin(), guessed_letters.end(), letter[0]) != guessed_letters.end()) {
+                    cout << "You already tried this letter! Try again: ";
+                }
+                else {
+                        accepted = true;
+                        guessed_letters.push_back(letter[0]);
+                }
             }
         } while (!accepted);
         l++;
         bool inWord = false;
-        for (int i = 0; i < t; i++){
-            char c = word_array[i];
-            if (letter[0] == c){
+        for (int i = 0; i < t; i++) {
+            if (letter[0] == word[i]) {
                 word_holder[i] = letter[0];
                 inWord = true;
             }
@@ -77,9 +79,10 @@ int main() {
         }
         else {
             cout << "Not in the word!" << endl;
+            errors++;
         }
 
-        if (word_holder == word_array){
+        if (word_holder == word){
             incomplete = false;
         }
         else {
