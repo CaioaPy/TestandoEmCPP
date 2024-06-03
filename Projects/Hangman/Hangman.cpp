@@ -31,12 +31,7 @@ int main() {
     strcpy(word_array, word.c_str());
     vector<char> guessed_letters;
     string word_holder(t, '_');
-    //testing only
-    cout << x << endl;
-    cout << word << endl;
-    //testing only
     bool incomplete = true;
-    int l = 0;
     do{
         for (int i = 0; i < t; i++) {
             cout << word_holder[i] << ' ';
