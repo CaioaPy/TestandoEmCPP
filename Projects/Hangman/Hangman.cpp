@@ -6,6 +6,7 @@
 #include <ctime>
 #include <cstring>
 #include <cctype>
+#include <vector>
 
 using namespace std;
 
@@ -53,8 +54,8 @@ int main() {
                 cout << "enter only a letter, try again" << endl;
                 accepted = false;
             }
-            else if (lettersStr.find(letter)){
-                cout << "you already tried this word! try again!" << endl;
+            else if (not lettersStr.find(letter)){
+                cout << "you already tried this letter! try again!" << endl;
             }
             else{
                 accepted = true;
